@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kadiogo — BF·Regions / Potentialités</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ===================================================
+  NAVIGATION (identique sur toutes les pages)
+  =================================================== -->
+<nav class="topbar">
+  <a href="index.html" class="logo">BF<span>·</span>Regions<span>/potentialités</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Accueil</a></li>
+    <li class="nav-dropdown" id="regionsDropdown">
+      <button onclick="toggleDropdown()" aria-haspopup="true">
+        Régions <i class="chevron">▾</i>
+      </button>
+      <div class="dropdown-panel" role="menu">
+        <p class="panel-title">Les 17 régions du Burkina Faso</p>
+        <div class="dropdown-grid">
+          <a href="bankui.html">    <span class="reg-name">Bankui</span>    <span class="reg-chef">Dédougou</span></a>
+          <a href="djoro.html">     <span class="reg-name">Djôrô</span>     <span class="reg-chef">Gaoua</span></a>
+          <a href="guiriko.html">   <span class="reg-name">Guiriko</span>   <span class="reg-chef">Bobo-Dioulasso</span></a>
+          <a href="goulmou.html">   <span class="reg-name">Goulmou</span>   <span class="reg-chef">Fada N'Gourma</span></a>
+          <a href="kadiogo.html" style="background:var(--green-light)">
+            <span class="reg-name" style="color:var(--green-dark)">Kadiogo</span>
+            <span class="reg-chef">Ouagadougou</span>
+          </a>
+          <a href="koulse.html">    <span class="reg-name">Koulsé</span>    <span class="reg-chef">Kaya</span></a>
+          <a href="liptako.html">   <span class="reg-name">Liptako</span>   <span class="reg-chef">Dori</span></a>
+          <a href="nakambe.html">   <span class="reg-name">Nakambé</span>   <span class="reg-chef">Tenkodogo</span></a>
+          <a href="nando.html">     <span class="reg-name">Nando</span>     <span class="reg-chef">Koudougou</span></a>
+          <a href="nazinon.html">   <span class="reg-name">Nazinon</span>   <span class="reg-chef">Manga</span></a>
+          <a href="oubri.html">     <span class="reg-name">Oubri</span>     <span class="reg-chef">Ziniaré</span></a>
+          <a href="sirba.html">     <span class="reg-name">Sirba</span>     <span class="reg-chef">Bogandé</span></a>
+          <a href="soum.html">      <span class="reg-name">Soum</span>      <span class="reg-chef">Djibo</span></a>
+          <a href="sourou.html">    <span class="reg-name">Sourou</span>    <span class="reg-chef">Tougan</span></a>
+          <a href="tannounyan.html"><span class="reg-name">Tannounyan</span><span class="reg-chef">Banfora</span></a>
+          <a href="tapoa.html">     <span class="reg-name">Tapoa</span>     <span class="reg-chef">Diapaga</span></a>
+          <a href="yaadga.html">    <span class="reg-name">Yaadga</span>    <span class="reg-chef">Ouahigouya</span></a>
+        </div>
+      </div>
+    </li>
+    <li><a href="about.html">À propos</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Accueil</a>
+  <button class="mobile-dropdown-toggle" id="mobileRegionsBtn" onclick="toggleMobileRegions()">
+    Régions <i class="chevron">▾</i>
+  </button>
+  <div class="mobile-regions-list" id="mobileRegionsList">
+    <a href="bankui.html">Bankui <span>Dédougou</span></a>
+    <a href="djoro.html">Djôrô <span>Gaoua</span></a>
+    <a href="guiriko.html">Guiriko <span>Bobo-Dioulasso</span></a>
+    <a href="goulmou.html">Goulmou <span>Fada N'Gourma</span></a>
+    <a href="kadiogo.html">Kadiogo <span>Ouagadougou</span></a>
+    <a href="koulse.html">Koulsé <span>Kaya</span></a>
+    <a href="liptako.html">Liptako <span>Dori</span></a>
+    <a href="nakambe.html">Nakambé <span>Tenkodogo</span></a>
+    <a href="nando.html">Nando <span>Koudougou</span></a>
+    <a href="nazinon.html">Nazinon <span>Manga</span></a>
+    <a href="oubri.html">Oubri <span>Ziniaré</span></a>
+    <a href="sirba.html">Sirba <span>Bogandé</span></a>
+    <a href="soum.html">Soum <span>Djibo</span></a>
+    <a href="sourou.html">Sourou <span>Tougan</span></a>
+    <a href="tannounyan.html">Tannounyan <span>Banfora</span></a>
+    <a href="tapoa.html">Tapoa <span>Diapaga</span></a>
+    <a href="yaadga.html">Yaadga <span>Ouahigouya</span></a>
+  </div>
+  <a href="about.html">À propos</a>
+</div>
+
+<!-- ===================================================
+  HERO RÉGION
+  =================================================== -->
+<section class="region-hero">
+  <div class="region-hero-inner">
+
+    <div class="region-hero-left">
+      <!-- Fil d'Ariane -->
+      <nav class="region-breadcrumb" aria-label="Fil d'Ariane">
+        <a href="index.html">Accueil</a>
+        <span>›</span>
+        <a href="index.html#regions">Régions</a>
+        <span>›</span>
+        <span>Bankui</span>
+      </nav>
+
+      <!-- Titre -->
+      <h1>Région de<br><em>Bankui</em></h1>
+
+      <p class="region-chef">
+        📍 Chef-lieu : <strong>Dédougou</strong> &nbsp;·&nbsp; Province : Mouhoun,  Balé, Banwa
+      </p>
+
+      <!-- Badges caractéristiques -->
+      <!-- <div class="region-badges">
+        <span class="badge green">🏙️ Capitale nationale</span>
+        <span class="badge amber">💼 Centre économique</span>
+        <span class="badge coral">🌡️ Climat soudano-sahélien</span>
+      </div> -->
+    </div>
+
+    <!-- Mini stats -->
+    <div class="region-hero-stats">
+      <div class="hero-stat">
+        <span class="hero-stat-num">1 901 269</span>
+        <span class="hero-stat-label">Habitants</span>
+      </div>
+      <div class="hero-stat-divider"></div>
+      <div class="hero-stat">
+        <span class="hero-stat-num">34 145</span>
+        <span class="hero-stat-label">km²</span>
+      </div>
+      <div class="hero-stat-divider"></div>
+      <div class="hero-stat">
+        <span class="hero-stat-num">3</span>
+        <span class="hero-stat-label">Province</span>
+      </div>
+      <!-- <div class="hero-stat-divider"></div>
+      <div class="hero-stat">
+        <span class="hero-stat-num">12,2°N</span>
+        <span class="hero-stat-label">Latitude</span>
+      </div> -->
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================================================
+  NAVIGATION SECTIONS (ancres)
+  =================================================== -->
+<nav class="section-nav" aria-label="Sections de la page">
+  <div class="section-nav-inner">
+    <a href="#geographie"  class="active">🗺️ Géographie</a>
+    <a href="#population">👥 Population</a>
+    <a href="#economie">   💰 Économie</a>
+    <a href="#tourisme">   🏛️ Tourisme</a>
+    <a href="#galerie">    📷 Galerie</a>
+    <a href="#carte">      📌 Carte</a>
+  </div>
+</nav>
+
+<!-- ===================================================
+  SECTION 1 — GÉOGRAPHIE & CLIMAT
+  =================================================== -->
+<div id="geographie" class="region-section fade-up">
+  <div class="region-section-title">
+    <div class="icon">🗺️</div>
+    <h2>Géographie &amp; Climat</h2>
+  </div>
+
+  <div class="two-col">
+    <div class="region-text">
+      <p>
+        La région de la Boucle de Bankui est peu accidentée. Le relief est assez monotone même si par endroit, cette
+monotonie est interrompue par des affleurements de grès parfois fortement escarpés (Sud du Mouhoun, Nord-Est des
+Balé et le centre des Banwa). Ces collines constituent ce qu’on appelle les hauts ensembles et leur altitude varie
+généralement entre 340 et 458 m. Le pic de Konkoliko (dans les Balé) est le plus haut sommet de la région et culmine
+à 621 m d’altitude.
+      </p>
+      <p>
+La région de Bankui est située dans la zone soudano-sahélienne avec cependant trois (3) variantes qui
+sont :
+au Nord, le secteur sub-sahélien avec une pluviométrie moyenne annuelle de 550 à 750 mm. ;
+au Centre, le secteur Nord-soudanien avec une pluviométrie moyenne annuelle de 700 à 900 mm. Il
+s’étend sur la partie Sud de la province de la Kossi, sur toute la province du Nayala et les parties
+        septentrionales des provinces du Mouhoun, et des Banwa ;
+        au Sud, le secteur sud-soudanien avec une pluviométrie moyenne annuelle de 1 000 à 1 100 mm qui
+        couvre entièrement la province des Balé et la partie Sud des Banwa et du Mouhoun.
+        Ainsi, la région est soumise à deux saisons qui s’alternent au cours de l’année. Une longue saison sèche de 7 à 8 mois
+        au Nord et une courte saison pluvieuse qui s’étale sur 4 à 5 mois dans le nord. Alors que dans le Sud la saison des
+        pluies couvre environ 5 à 6 mois contre 6 à 7 mois de saison sèche. Les températures modérées varient entre 19 et
+        23,49°C. Les températures extrêmes de 35°C et 40°C ont été enregistrées respectivement en 2016 et 2022 et
+        l’importance des ressources végétales de la région de la Boucle du Mouhoun permettent de classer la région parmi
+        celles considérées comme ayant un couvert végétal acceptable. Le tableau 01.02 fait la situation sur les températures
+        extrêmes (en °C) dans les stations de la région
+      </p>
+      <p>
+        En matière de forêts, la région comptait en 2022, 12 forêts classées avec une superficie totale de départ de 233 425
+ha. On note aussi la présence des forêts villageoises et des bois sacrés qui sont protégés par les populations locales.
+Toutes ces forêts sont menacées par la coupe abusive du bois, les feux de brousse, le pâturage, le braconnage et
+toutes sortes de pressions anthropiques.
+La région de Bankui dispose de deux (2) aires de protection de la faune. Il s’agit des aires des deux
+Balé d’une superficie de 115 000 ha et celle de Pâ qui a 15 625 ha comme superficie. Ces deux (2) aires de protection
+sont situées dans la province des Balé. La faune de la région est assez riche et variée. Elle est constituée en grande
+partie de petits gibiers (lièvres, antilopes de petite taille, rats, écureuils, tourterelles…).
+Les grands gibiers rencontrés sont essentiellement quelques troupeaux d’hippopotames, des buffles, des éléphants
+(espèces intégralement protégées), des phacochères, des hyènes, des lions et des panthères.
+Les aléas climatiques et les actions anthropiques diverses ont dégradé voire détruit l’habitat de la faune, l’exposant à
+l’assaut des braconniers et conduisant à la diminution et à la disparition de certaines espèces.
+Les plans d’eau de la région constituent l’habitat des ressources halieutiques. Il n’existe pas de données précises sur
+le potentiel en ressources halieutiques de la région. Cependant, un rapprochement du lac Sourou avec d’autres cours
+d’eau (Niger, Sénégal) a permis d’estimer son potentiel entre 300 et 1000 tonnes selon l’importance de la crue.
+      </p>
+    </div>
+
+    <div class="info-box">
+      <h4>📋 Données géographiques</h4>
+      <dl>
+        <div class="info-row"><dt>Superficie</dt>      <dd>34 145</dd></div>
+        <div class="info-row"><dt>Altitude moy.</dt>   <dd>300 m</dd></div>
+        <div class="info-row"><dt>Cours d'eau</dt>     <dd>Nakambé (3 bras)</dd></div>
+        <div class="info-row"><dt>Saison des pluies</dt><dd>Juin – Octobre</dd></div>
+        <div class="info-row"><dt>Pluviométrie</dt>    <dd>~856,78 mm</dd></div>
+        <div class="info-row"><dt>Temp. max.</dt>      <dd>41 °C (avril)</dd></div>
+        <div class="info-row"><dt>Temp. min.</dt>      <dd>16 °C (janvier)</dd></div>
+      </dl>
+    </div>
+  </div>
+</div>
+
+<!-- ===================================================
+  SECTION 2 — POPULATION & ETHNIES
+  =================================================== -->
+<div id="population" class="region-section fade-up" style="background:var(--blanc);">
+  <div class="region-section-title">
+    <div class="icon amber">👥</div>
+    <h2>Population &amp; Ethnies</h2>
+  </div>
+
+  <div class="two-col two-col-reverse">
+    <div class="info-box">
+      <h4>📊 Données démographiques</h4>
+      <dl>
+        <div class="info-row"><dt>Population</dt>       <dd>~1 901 269 habitants (9.26% de la population)</dd></div>
+        <div class="info-row"><dt>Densité</dt>           <dd>~55,38 habitants au Km²</dd></div>
+        <div class="info-row"><dt>Chef-lieu</dt>         <dd>Dédougou</dd></div>
+        <div class="info-row"><dt>Langue officielle</dt> <dd>Français</dd></div>
+        <div class="info-row"><dt>Langue principale</dt> <dd>le Dafing
+(28,1%),  le Mooré(15,3%), le Bwamu (14,8%), le San (14,2%), le Dioula (8,5%), le Fulfuldé (6,4%) et le Bobo (3,5%).</dd></div>
+        <div class="info-row"><dt>Ethnie majoritaire</dt><dd>Dafing</dd></div>
+        <div class="info-row"><dt>Religions</dt>         <dd>Islam, Christianisme, Animisme</dd></div>
+      </dl>
+    </div>
+
+    <div class="region-text">
+      <p>
+        La jeunesse est très présente : plus de 60 % de la population a moins de 25 ans,
+        ce qui en fait un vivier d'énergie créatrice, notamment dans les secteurs de la culture,
+        du numérique et de l'entrepreneuriat.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- ===================================================
+  SECTION 3 — ÉCONOMIE & RESSOURCES
+  =================================================== -->
+<div id="economie" class="region-section fade-up">
+  <div class="region-section-title">
+    <div class="icon amber">💰</div>
+    <h2>Économie &amp; Ressources</h2>
+  </div>
+
+  <div class="two-col">
+    <div class="region-text">
+      <p>
+        Les sols de la région sont assez variés. Les principaux types de sol rencontrés sont : les sols minéraux bruts associés
+aux sols peu évolués, les sols peu évolués, les vertisols et les sols bruns eutrophes, les sols sodiques, les sols
+hydromorphes, les sols isohumiques et les sols sesquioxydes.
+      </p>
+      <p>
+        il convient également de noter que de nombreux indices miniers sont signalés dans la région. Mais tous ces indices
+n’ont pas toujours fait l’objet d’études approfondies. Il s’agit principalement d’indices miniers relatifs au diamant dans
+le bassin versant du Mouhoun, au plomb (indice de plomb de Gan) au Nord-Est de Tougan dans la province du
+Sourou, à l’aluminium (bauxite) dans la province des Balé (indice de Fara : 300 000 tonnes) et à la tourbe dans la
+vallée du fleuve Sourou.
+      </p>
+      <p>
+        L'agriculture péri-urbaine persiste, notamment le maraîchage autour des barrages.
+        Les cultures de mil, de sorgho et de légumes approvisionnent partiellement la ville.
+        L'élevage bovin et avicole est aussi pratiqué en périphérie.
+      </p>
+    </div>
+
+    <div class="info-box">
+      <h4>💼 Secteurs clés</h4>
+      <dl>
+        <div class="info-row"><dt>Secteur dominant</dt>  <dd>Agriculture</dd></div>
+        <div class="info-row"><dt>Agriculture</dt>        <dd>Maraîchage, mil, sorgho</dd></div>
+      </dl>
+    </div>
+  </div>
+</div>
+
+<!-- ===================================================
+  SECTION 4 — TOURISME & SITES
+  =================================================== -->
+<div id="tourisme" class="region-section fade-up" style="background:var(--blanc);">
+  <div class="region-section-title">
+    <div class="icon coral">🏛️</div>
+    <h2>Tourisme &amp; Sites remarquables</h2>
+  </div>
+
+  <p style="color:var(--text-muted); font-size:0.95rem; margin-bottom:32px; max-width:680px;">
+    Dédougou est également un pole de l'enseignement superieur car abritant l'Université Daniel Ouezzin Coulibaly .
+    Elle se concentre sur les sciences, la technologie, les lettres et les sciences humaines, avec pour mission la formation professionnelle et la recherche.
+  </p>
+  <p>
+    La région de Bankui est communément désignée comme 
+    le « grenier du Burkina Faso ». Grâce à ses terres fertiles et à la présence 
+    du fleuve Mouhoun, elle est la première zone de production céréalière 
+    (sorgho, mil, maïs) et de cultures de rente comme le coton et le sésame
+  </p>
+</div>
+
+<!-- ===================================================
+  SECTION 5 — GALERIE PHOTOS
+  =================================================== -->
+<div id="galerie" class="region-section fade-up">
+  <div class="region-section-title">
+    <div class="icon blue">📷</div>
+    <h2>Galerie photos</h2>
+  </div>
+
+  <div class="galerie-grid">
+    <!-- Image principale (grande) -->
+    <div class="galerie-item">
+      <div class="galerie-placeholder">
+        <span>🏙️</span>
+        <p>Vue panoramique de Dédougou</p>
+        <small>Remplacez par : <code>img src="photos/dedougou-ville.jpg"</code></small>
+      </div>
+    </div>
+    <!-- Images secondaires -->
+    <div class="galerie-item">
+      <div class="galerie-placeholder">
+        <span>🎬</span>
+        <p>Cérémonie FESPACO</p>
+      </div>
+    </div>
+    <div class="galerie-item">
+      <div class="galerie-placeholder">
+        <span>🛖</span>
+        <p>Village Artisanal</p>
+      </div>
+    </div>
+    <div class="galerie-item">
+      <div class="galerie-placeholder">
+        <span>🌿</span>
+        <p>Parc Bangr-Weogo</p>
+      </div>
+    </div>
+    <div class="galerie-item">
+      <div class="galerie-placeholder">
+        <span>🕌</span>
+        <p>Grande Mosquée</p>
+      </div>
+    </div>
+    <div class="galerie-item">
+      <div class="galerie-placeholder">
+        <span>🎨</span>
+        <p>SIAO — Artisanat</p>
+      </div>
+    </div>
+  </div>
+
+  <p style="font-size:0.8rem; color:var(--text-muted); margin-top:16px; font-style:italic;">
+    💡 Pour ajouter vos photos : créez un dossier <code>photos/</code> et remplacez les placeholders par des balises <code>&lt;img&gt;</code>.
+  </p>
+</div>
+
+<!-- ===================================================
+  FOOTER
+  =================================================== -->
+<footer>
+  <div class="footer-logo">BF<span>·</span>Regions<span>/potentialités</span></div>
+  <nav class="footer-links">
+    <a href="index.html">Accueil</a>
+    <a href="index.html#regions">Régions</a>
+    <a href="about.html">À propos</a>
+  </nav>
+  <p class="footer-copy">
+    © 2025-2026 — Romaric &amp; Patrick · Université Norbert Zongo · Koudougou, Burkina Faso<br>
+  </p>
+</footer>
+
+<script src="script.js"></script>
+<script>
+  /* Lien actif dans la nav sections au scroll */
+  const sections = document.querySelectorAll('.region-section[id]');
+  const navLinks  = document.querySelectorAll('.section-nav-inner a');
+
+  const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(a => a.classList.remove('active'));
+        const active = document.querySelector(`.section-nav-inner a[href="#${entry.target.id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { threshold: 0.4 });
+
+  sections.forEach(s => sectionObserver.observe(s));
+</script>
+</body>
+</html>
