@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kadiogo — BF·Regions / Potentialités</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ===================================================
+  NAVIGATION (identique sur toutes les pages)
+  =================================================== -->
+<nav class="topbar">
+  <a href="index.html" class="logo">BF<span>·</span>Regions<span>/potentialités</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Accueil</a></li>
+    <li class="nav-dropdown" id="regionsDropdown">
+      <button onclick="toggleDropdown()" aria-haspopup="true">
+        Régions <i class="chevron">▾</i>
+      </button>
+      <div class="dropdown-panel" role="menu">
+        <p class="panel-title">Les 17 régions du Burkina Faso</p>
+        <div class="dropdown-grid">
+          <a href="bankui.html">    <span class="reg-name">Bankui</span>    <span class="reg-chef">Dédougou</span></a>
+          <a href="djoro.html">     <span class="reg-name">Djôrô</span>     <span class="reg-chef">Gaoua</span></a>
+          <a href="guiriko.html">   <span class="reg-name">Guiriko</span>   <span class="reg-chef">Bobo-Dioulasso</span></a>
+          <a href="goulmou.html">   <span class="reg-name">Goulmou</span>   <span class="reg-chef">Fada N'Gourma</span></a>
+          <a href="kadiogo.html" style="background:var(--green-light)">
+            <span class="reg-name" style="color:var(--green-dark)">Kadiogo</span>
+            <span class="reg-chef">Ouagadougou</span>
+          </a>
+          <a href="koulse.html">    <span class="reg-name">Koulsé</span>    <span class="reg-chef">Kaya</span></a>
+          <a href="liptako.html">   <span class="reg-name">Liptako</span>   <span class="reg-chef">Dori</span></a>
+          <a href="nakambe.html">   <span class="reg-name">Nakambé</span>   <span class="reg-chef">Tenkodogo</span></a>
+          <a href="nando.html">     <span class="reg-name">Nando</span>     <span class="reg-chef">Koudougou</span></a>
+          <a href="nazinon.html">   <span class="reg-name">Nazinon</span>   <span class="reg-chef">Manga</span></a>
+          <a href="oubri.html">     <span class="reg-name">Oubri</span>     <span class="reg-chef">Ziniaré</span></a>
+          <a href="sirba.html">     <span class="reg-name">Sirba</span>     <span class="reg-chef">Bogandé</span></a>
+          <a href="soum.html">      <span class="reg-name">Soum</span>      <span class="reg-chef">Djibo</span></a>
+          <a href="sourou.html">    <span class="reg-name">Sourou</span>    <span class="reg-chef">Tougan</span></a>
+          <a href="tannounyan.html"><span class="reg-name">Tannounyan</span><span class="reg-chef">Banfora</span></a>
+          <a href="tapoa.html">     <span class="reg-name">Tapoa</span>     <span class="reg-chef">Diapaga</span></a>
+          <a href="yaadga.html">    <span class="reg-name">Yaadga</span>    <span class="reg-chef">Ouahigouya</span></a>
+        </div>
+      </div>
+    </li>
+    <li><a href="about.html">À propos</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Accueil</a>
+  <button class="mobile-dropdown-toggle" id="mobileRegionsBtn" onclick="toggleMobileRegions()">
+    Régions <i class="chevron">▾</i>
+  </button>
+  <div class="mobile-regions-list" id="mobileRegionsList">
+    <a href="bankui.html">Bankui <span>Dédougou</span></a>
+    <a href="djoro.html">Djôrô <span>Gaoua</span></a>
+    <a href="guiriko.html">Guiriko <span>Bobo-Dioulasso</span></a>
+    <a href="goulmou.html">Goulmou <span>Fada N'Gourma</span></a>
+    <a href="kadiogo.html">Kadiogo <span>Ouagadougou</span></a>
+    <a href="koulse.html">Koulsé <span>Kaya</span></a>
+    <a href="liptako.html">Liptako <span>Dori</span></a>
+    <a href="nakambe.html">Nakambé <span>Tenkodogo</span></a>
+    <a href="nando.html">Nando <span>Koudougou</span></a>
+    <a href="nazinon.html">Nazinon <span>Manga</span></a>
+    <a href="oubri.html">Oubri <span>Ziniaré</span></a>
+    <a href="sirba.html">Sirba <span>Bogandé</span></a>
+    <a href="soum.html">Soum <span>Djibo</span></a>
+    <a href="sourou.html">Sourou <span>Tougan</span></a>
+    <a href="tannounyan.html">Tannounyan <span>Banfora</span></a>
+    <a href="tapoa.html">Tapoa <span>Diapaga</span></a>
+    <a href="yaadga.html">Yaadga <span>Ouahigouya</span></a>
+  </div>
+  <a href="about.html">À propos</a>
+</div>
+
+<!-- ===================================================
+  HERO RÉGION
+  =================================================== -->
+<section class="region-hero">
+  <div class="region-hero-inner">
+
+    <div class="region-hero-left">
+      <!-- Fil d'Ariane -->
+      <nav class="region-breadcrumb" aria-label="Fil d'Ariane">
+        <a href="index.html">Accueil</a>
+        <span>›</span>
+        <a href="index.html#regions">Régions</a>
+        <span>›</span>
+        <span>Bankui</span>
+      </nav>
+
+      <!-- Titre -->
+      <h1>Région de<br><em>Oubri</em></h1>
+
+      <p class="region-chef">
+        📍 Chef-lieu : <strong>Ziniaré</strong> &nbsp;·&nbsp; Provinces : Oubritenga, Ganzourgou, Kourwéogo
+      </p>
+
+    </div>
+
+    <!-- Mini stats -->
+    <div class="region-hero-stats">
+      <div class="hero-stat">
+        <span class="hero-stat-num">~1 000 000</span>
+        <span class="hero-stat-label">Habitants</span>
+      </div>
+      <div class="hero-stat-divider"></div>
+      <div class="hero-stat">
+        <span class="hero-stat-num">25 000</span>
+        <span class="hero-stat-label">km²</span>
+      </div>
+      <div class="hero-stat-divider"></div>
+      <div class="hero-stat">
+        <span class="hero-stat-num">3</span>
+        <span class="hero-stat-label">Province</span>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================================================
+  NAVIGATION SECTIONS (ancres)
+  =================================================== -->
+<nav class="section-nav" aria-label="Sections de la page">
+  <div class="section-nav-inner">
+    <a href="#geographie"  class="active">🗺️ Géographie</a>
+    <a href="#population">👥 Population</a>
+    <a href="#economie">   💰 Économie</a>
+    <a href="#tourisme">   🏛️ Tourisme</a>
+    <a href="#galerie">    📷 Galerie</a>
+    <a href="#carte">      📌 Carte</a>
+  </div>
+</nav>
+
+<!-- ===================================================
+  SECTION 1 — GÉOGRAPHIE & CLIMAT
+  =================================================== -->
+<div id="geographie" class="region-section fade-up">
+  <div class="region-section-title">
+    <div class="icon">🗺️</div>
+    <h2>Géographie &amp; Climat</h2>
+  </div>
+
+  <div class="two-col">
+    <div class="region-text">
+      <p>
+        Oubri est une région proche de Ouagadougou, marquée par une forte influence 
+culturelle et historique.
+      </p>
+        <p>
+Elle est connue pour être la région natale de plusieurs personnalités importantes.
+
+      </p>
+    </div>
+
+    <div class="info-box">
+      <h4>📋 Données géographiques</h4>
+      <dl>
+        <div class="info-row"><dt>Superficie</dt>      <dd>25 000km2</dd></div>
+        <div class="info-row"><dt>Climat</dt>   <dd>Soudano-sahélien</dd></div>
+        <div class="info-row"><dt>Pluviométrie</dt>    <dd>~500--900mm</dd></div>
+      </dl>
+    </div>
+  </div>
+</div>
+
+<!-- ===================================================
+  SECTION 2 — POPULATION & ETHNIESElle joue un rôle historique important dans le royaume mossi.
+
+  =================================================== -->
+<div id="population" class="region-section fade-up" style="background:var(--blanc);">
+  <div class="region-section-title">
+    <div class="icon amber">👥</div>
+    <h2>Population &amp; Ethnies</h2>
+  </div>
+
+  <div class="two-col two-col-reverse">
+    <div class="info-box">
+      <h4>📊 Données démographiques</h4>
+      <dl>
+        <div class="info-row"><dt>Population</dt>       <dd>~1000 000</dd></div>        <div class="info-row"><dt>Chef-lieu</dt>         <dd>Dédougou</dd></div>
+        <div class="info-row"><dt>Langue officielle</dt> <dd>Français</dd></div>
+        <div class="info-row"><dt>Langue principale</dt> <dd>le moore</dd></div>
+        <div class="info-row"><dt>Ethnie majoritaire</dt><dd>les mossi, </dd></div>
+        <div class="info-row"><dt>Religions</dt>         <dd>Animisme, Islam, Christianisme, </dd></div>
+      </dl>
+    </div>
+
+    <div class="region-text">
+      <p>
+         Région cosmopolite, le region de oubri est un centre educatif majeur avec une forte diversité ethnique 
+        et linguistique.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- ===================================================
+  SECTION 3 — ÉCONOMIE & RESSOURCES
+  =================================================== -->
+<div id="economie" class="region-section fade-up">
+  <div class="region-section-title">
+    <div class="icon amber">💰</div>
+    <h2>Économie &amp; Ressources</h2>
+  </div>
+
+  <div class="two-col">
+    <div class="region-text">
+      <p>
+         L’économie repose sur l'agriculture et les services .
+   
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- ===================================================
+  SECTION 4 — TOURISME & SITES
+  =================================================== -->
+<div id="tourisme" class="region-section fade-up" style="background:var(--blanc);">
+  <div class="region-section-title">
+    <div class="icon coral">🏛️</div>
+    <h2>Tourisme &amp; Sites remarquables</h2>
+  </div>
+    <ul>
+<li>Musée de Manega</li>
+<li>Parc animalier de Ziniaré</li>
+</ul>
+</div>
+
+<!-- ===================================================
+  SECTION 5 — GALERIE PHOTOS
+  =================================================== -->
+<div id="galerie" class="region-section fade-up">
+  <div class="region-section-title">
+    <div class="icon blue">📷</div>
+    <h2>Galerie photos</h2>
+  </div>
+
+  <div class="galerie-grid">
+    <!-- Image principale (grande) -->
+    <div class="galerie-item">
+      <div class="galerie-placeholder">
+        <span>🏙️</span>
+        <p>Vue panoramique de Oubri</p>
+        <small>Remplacez par : <code>img src="photos/gaoua-ville.jpg"</code></small>
+      </div>
+    </div>
+    <!-- Images secondaires -->
+    <div class="galerie-item">
+      <div class="galerie-placeholder">
+        <span>🎬</span>
+        <p>Village de oubri</p>
+      </div>
+    </div>
+    <div class="galerie-item">
+      <div class="galerie-placeholder">
+        <span>🛖</span>
+        <p>kaya cuir</p>
+      </div>
+    </div>
+  </div>
+
+  <p style="font-size:0.8rem; color:var(--text-muted); margin-top:16px; font-style:italic;">
+    💡 Pour ajouter vos photos : créez un dossier <code>photos/</code> et remplacez les placeholders par des balises <code>&lt;img&gt;</code>.
+  </p>
+</div>
+
+<!-- ===================================================
+  FOOTER
+  =================================================== -->
+<footer>
+  <div class="footer-logo">BF<span>·</span>Regions<span>/potentialités</span></div>
+  <nav class="footer-links">
+    <a href="index.html">Accueil</a>
+    <a href="index.html#regions">Régions</a>
+    <a href="about.html">À propos</a>
+  </nav>
+  <p class="footer-copy">
+    © 2025-2026 — Romaric &amp; Patrick · Université Norbert Zongo · Koudougou, Burkina Faso<br>
+  </p>
+</footer>
+
+<script src="script.js"></script>
+<script>
+  /* Lien actif dans la nav sections au scroll */
+  const sections = document.querySelectorAll('.region-section[id]');
+  const navLinks  = document.querySelectorAll('.section-nav-inner a');
+
+  const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(a => a.classList.remove('active'));
+        const active = document.querySelector(`.section-nav-inner a[href="#${entry.target.id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { threshold: 0.4 });
+
+  sections.forEach(s => sectionObserver.observe(s));
+</script>
+</body>
+</html>
