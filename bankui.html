@@ -83,56 +83,70 @@
 <!-- ===================================================
   HERO RÉGION
   =================================================== -->
+
+  </div>
+</section> 
 <section class="region-hero">
-  <div class="region-hero-inner">
+  <div class="slider">
 
-    <div class="region-hero-left">
-      <!-- Fil d'Ariane -->
-      <nav class="region-breadcrumb" aria-label="Fil d'Ariane">
-        <a href="index.html">Accueil</a>
-        <span>›</span>
-        <a href="index.html#regions">Régions</a>
-        <span>›</span>
-        <span>Bankui</span>
-      </nav>
-
-      <!-- Titre -->
-      <h1>Région de<br><em>Bankui</em></h1>
-
-      <p class="region-chef">
-        📍 Chef-lieu : <strong>Dédougou</strong> &nbsp;·&nbsp; Province : Mouhoun,  Balé, Banwa
-      </p>
-
-      <!-- Badges caractéristiques -->
-      <!-- <div class="region-badges">
-        <span class="badge green">🏙️ Capitale nationale</span>
-        <span class="badge amber">💼 Centre économique</span>
-        <span class="badge coral">🌡️ Climat soudano-sahélien</span>
-      </div> -->
+    <!-- IMAGES -->
+    <div class="slider-content">
+      <img src="images/fespaco.png" class="active">
+      <img src="images/Entre_de_bankui.jpeg">
+      <img src="images/masque_de_bankui.jpeg">
     </div>
 
-    <!-- Mini stats -->
-    <div class="region-hero-stats">
-      <div class="hero-stat">
-        <span class="hero-stat-num">1 901 269</span>
-        <span class="hero-stat-label">Habitants</span>
+    <!-- OVERLAY -->
+    <div class="region-hero-inner slider-overlay">
+
+      <div class="region-hero-left">
+        
+        <!-- Fil d'Ariane -->
+        <nav class="region-breadcrumb" aria-label="Fil d'Ariane">
+          <a href="index.html">Accueil</a>
+          <span>›</span>
+          <a href="index.html#regions">Régions</a>
+          <span>›</span>
+          <span>Bankui</span>
+        </nav>
+
+        <!-- Titre -->
+        <h1>Région de<br><em>Bankui</em></h1>
+
+        <!-- Infos -->
+        <p class="region-chef">
+          📍 Chef-lieu : <strong>Dédougou</strong> · Provinces : Mouhoun, Balé, Banwa
+        </p>
       </div>
-      <div class="hero-stat-divider"></div>
-      <div class="hero-stat">
-        <span class="hero-stat-num">34 145</span>
-        <span class="hero-stat-label">km²</span>
+
+      <!-- STATS -->
+      <div class="region-hero-stats">
+        <div class="hero-stat">
+          <span class="hero-stat-num">1 901 269</span>
+          <span class="hero-stat-label">Habitants</span>
+        </div>
+
+        <div class="hero-stat-divider"></div>
+
+        <div class="hero-stat">
+          <span class="hero-stat-num">34 145</span>
+          <span class="hero-stat-label">km²</span>
+        </div>
+
+        <div class="hero-stat-divider"></div>
+
+        <div class="hero-stat">
+          <span class="hero-stat-num">3</span>
+          <span class="hero-stat-label">Provinces</span>
+        </div>
       </div>
-      <div class="hero-stat-divider"></div>
-      <div class="hero-stat">
-        <span class="hero-stat-num">3</span>
-        <span class="hero-stat-label">Province</span>
-      </div>
-      <!-- <div class="hero-stat-divider"></div>
-      <div class="hero-stat">
-        <span class="hero-stat-num">12,2°N</span>
-        <span class="hero-stat-label">Latitude</span>
-      </div> -->
+
     </div>
+
+    <!-- CONTROLS -->
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+    <div class="dots"></div>
 
   </div>
 </section>
@@ -143,11 +157,11 @@
 <nav class="section-nav" aria-label="Sections de la page">
   <div class="section-nav-inner">
     <a href="#geographie"  class="active">🗺️ Géographie</a>
-    <a href="#population">👥 Population</a>
-    <a href="#economie">   💰 Économie</a>
-    <a href="#tourisme">   🏛️ Tourisme</a>
-    <a href="#galerie">    📷 Galerie</a>
-    <a href="#carte">      📌 Carte</a>
+    <a href="#population">Population</a>
+    <a href="#economie">    Économie</a>
+    <a href="#tourisme">    Tourisme</a>
+    <a href="#galerie">     Galerie</a>
+    <a href="#carte">       Carte</a>
   </div>
 </nav>
 
@@ -306,6 +320,7 @@ vallée du fleuve Sourou.
   <p style="color:var(--text-muted); font-size:0.95rem; margin-bottom:32px; max-width:680px;">
     Dédougou est également un pole de l'enseignement superieur car abritant l'Université Daniel Ouezzin Coulibaly .
     Elle se concentre sur les sciences, la technologie, les lettres et les sciences humaines, avec pour mission la formation professionnelle et la recherche.
+  <img src="images/logo-bankui.jpeg" alt="">
   </p>
   <p>
     La région de Bankui est communément désignée comme 
@@ -328,21 +343,24 @@ vallée du fleuve Sourou.
     <!-- Image principale (grande) -->
     <div class="galerie-item">
       <div class="galerie-placeholder">
-        <span>🏙️</span>
+        <span></span>
         <p>Vue panoramique de Dédougou</p>
-        <small>Remplacez par : <code>img src="photos/dedougou-ville.jpg"</code></small>
+         <code> <img src="images/le mouhon1.jpeg" alt=""></code>
+         <code> <img src="images/le mouhoun.jpeg" alt=""></code>
+
       </div>
     </div>
     <!-- Images secondaires -->
     <div class="galerie-item">
       <div class="galerie-placeholder">
-        <span>🎬</span>
-        <p>Cérémonie FESPACO</p>
+        <span></span>
+        <p>A visiter</p>
+        <img src="images/fespaco.png" alt="">
       </div>
     </div>
     <div class="galerie-item">
       <div class="galerie-placeholder">
-        <span>🛖</span>
+        <span></span>
         <p>Village Artisanal</p>
       </div>
     </div>

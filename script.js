@@ -83,3 +83,50 @@ document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
     }
   });
 })();
+
+
+/* ===== SLIDER ===== */
+(function initSlider() {
+  const slider = document.querySelector(".slider");
+  if (!slider) return;
+
+  let index = 0;
+  const images = slider.querySelectorAll(".slider-content img");
+  const dotsContainer = slider.querySelector(".dots");
+
+  // créer dots
+  images.forEach((_, i) => {
+    let dot = document.createElement("span");
+    dot.addEventListener("click", () => showImage(i));
+    dotsContainer.appendChild(dot);
+  });
+
+  const dots = dotsContainer.querySelectorAll("span");
+
+  function showImage(i) {
+    images[index].classList.remove("active");
+    dots[index].classList.remove("active");
+
+    index = i;
+
+    images[index].classList.add("active");
+    dots[index].classList.add("active");
+  }
+
+  // boutons
+  slider.querySelector(".next").onclick = () => {
+    showImage((index + 1) % images.length);
+  };
+
+  slider.querySelector(".prev").onclick = () => {
+    showImage((index - 1 + images.length) % images.length);
+  };
+
+  // auto slide
+  setInterval(() => {
+    showImage((index + 1) % images.length);
+  }, 5000);
+
+  // init
+  dots[0].classList.add("active");
+})();
