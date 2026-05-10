@@ -84,45 +84,66 @@
   HERO RÉGION
   =================================================== -->
 <section class="region-hero">
-  <div class="region-hero-inner">
+  <div class="slider">
 
-    <div class="region-hero-left">
-      <!-- Fil d'Ariane -->
-      <nav class="region-breadcrumb" aria-label="Fil d'Ariane">
-        <a href="index.html">Accueil</a>
-        <span>›</span>
-        <a href="index.html#regions">Régions</a>
-        <span>›</span>
-        <span>Bankui</span>
-      </nav>
+    <!-- IMAGES -->
+    <div class="slider-content">
+      <img src="images/fespaco.png" class="active">
+      <img src="images/Entre_de_bankui.jpeg">
+      <img src="images/masque_de_bankui.jpeg">
+    </div>
 
-      <!-- Titre -->
-      <h1>Région de<br><em>Koulsé</em></h1>
+    <!-- OVERLAY -->
+    <div class="region-hero-inner slider-overlay">
 
-      <p class="region-chef">
-        📍 Chef-lieu : <strong>Kaya</strong> &nbsp;·&nbsp; Provinces : Sanmatenga, Namentenga, Bam
-      </p>
+      <div class="region-hero-left">
+        
+        <!-- Fil d'Ariane -->
+        <nav class="region-breadcrumb" aria-label="Fil d'Ariane">
+          <a href="index.html">Accueil</a>
+          <span>›</span>
+          <a href="index.html#regions">Régions</a>
+          <span>›</span>
+          <span>Bankui</span>
+        </nav>
+
+        <!-- Titre -->
+        <h1>Région de<br><em>Kadiogo</em></h1>
+
+        <!-- Infos -->
+        <p class="region-chef">
+          📍 Chef-lieu : <strong>Ouagadougou</strong> · Provinces : Bam, Namentenga, Sanmatenga
+        </p>
+      </div>
+
+      <!-- STATS -->
+      <div class="region-hero-stats">
+        <div class="hero-stat">
+          <span class="hero-stat-num">1 874 669</span>
+          <span class="hero-stat-label">Habitants</span>
+        </div>
+
+        <div class="hero-stat-divider"></div>
+
+        <div class="hero-stat">
+          <span class="hero-stat-num">19 840  </span>
+          <span class="hero-stat-label">km²</span>
+        </div>
+
+        <div class="hero-stat-divider"></div>
+
+        <div class="hero-stat">
+          <span class="hero-stat-num">3</span>
+          <span class="hero-stat-label">Provinces</span>
+        </div>
+      </div>
 
     </div>
 
-    <!-- Mini stats -->
-    <div class="region-hero-stats">
-      <div class="hero-stat">
-        <span class="hero-stat-num">1 500 000</span>
-        <span class="hero-stat-label">Habitants</span>
-      </div>
-      <div class="hero-stat-divider"></div>
-      <div class="hero-stat">
-        <span class="hero-stat-num">25 000</span>
-        <span class="hero-stat-label">km²</span>
-      </div>
-      <div class="hero-stat-divider"></div>
-      <div class="hero-stat">
-        <span class="hero-stat-num">3</span>
-        <span class="hero-stat-label">Province</span>
-      </div>
-
-    </div>
+    <!-- CONTROLS -->
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+    <div class="dots"></div>
 
   </div>
 </section>
@@ -153,18 +174,22 @@
   <div class="two-col">
     <div class="region-text">
       <p>
-  Située dans le Centre-Nord, cette région est marquée par un climat sahélien 
-avec des périodes de sécheresse importantes.
+         la region de kuilsé est une région du Burkina Faso située dans la partie nord du pays. Elle est bordée par les régions de la Boucle du Mouhoun au sud, du Nord à l'est, et du Sahel au nord. La région de Koulsé est caractérisée par un climat sahélien, avec des températures élevées et des précipitations irrégulières. L'économie de la région repose principalement sur l'agriculture, l'élevage et le commerce local. La région de Koulsé est également connue pour sa diversité culturelle et ses traditions vivantes, mettant en avant le "vivre ensemble" et la résilience face aux défis climatiques et socio-économiques.
+        Située dans le Centre-Nord, cette région est marquée par un climat sahélien 
+        avec des périodes de sécheresse importantes.
       </p>
         <p>
             L’élevage et le commerce local y jouent un rôle essentiel.
+      </p>
+      <p>
+         Surnommée la région des eaux, des cultures et des patrimoines vivants, elle met en avant le "vivre ensemble" et la résilience face aux crises.
       </p>
     </div>
 
     <div class="info-box">
       <h4>📋 Données géographiques</h4>
       <dl>
-        <div class="info-row"><dt>Superficie</dt>      <dd>25 000km2</dd></div>
+        <div class="info-row"><dt>Superficie</dt>      <dd>19 840 km²</dd></div>
         <div class="info-row"><dt>Climat</dt>   <dd>sahélien</dd></div>
         <div class="info-row"><dt>Pluviométrie</dt>    <dd>~200--700mm</dd></div>
       </dl>
@@ -238,39 +263,12 @@ avec des périodes de sécheresse importantes.
 <!-- ===================================================
   SECTION 5 — GALERIE PHOTOS
   =================================================== -->
-<div id="galerie" class="region-section fade-up">
-  <div class="region-section-title">
-    <div class="icon blue">📷</div>
-    <h2>Galerie photos</h2>
-  </div>
-
-  <div class="galerie-grid">
-    <!-- Image principale (grande) -->
-    <div class="galerie-item">
-      <div class="galerie-placeholder">
-        <span>🏙️</span>
-        <p>Vue panoramique de Kaya</p>
-        <small>Remplacez par : <code>img src="photos/gaoua-ville.jpg"</code></small>
-      </div>
-    </div>
-    <!-- Images secondaires -->
-    <div class="galerie-item">
-      <div class="galerie-placeholder">
-        <span>🎬</span>
-        <p>Village kaya</p>
-      </div>
-    </div>
-    <div class="galerie-item">
-      <div class="galerie-placeholder">
-        <span>🛖</span>
-        <p>kaya cuir</p>
-      </div>
-    </div>
-  </div>
-
-  <p style="font-size:0.8rem; color:var(--text-muted); margin-top:16px; font-style:italic;">
-    💡 Pour ajouter vos photos : créez un dossier <code>photos/</code> et remplacez les placeholders par des balises <code>&lt;img&gt;</code>.
-  </p>
+<div class="image">
+  <img src="images/monumenMartyr.png" alt="">
+  <img src="images/placeNatio.jpeg" alt="">
+  <img src="images/ruine_lorepeni.jpeg" alt="">
+  <img src="images/maskoff.jpeg" alt="">
+  <img src="images/cascade.png" alt="">
 </div>
 
 <!-- ===================================================

@@ -84,45 +84,66 @@
   HERO RÉGION
   =================================================== -->
 <section class="region-hero">
-  <div class="region-hero-inner">
+  <div class="slider">
 
-    <div class="region-hero-left">
-      <!-- Fil d'Ariane -->
-      <nav class="region-breadcrumb" aria-label="Fil d'Ariane">
-        <a href="index.html">Accueil</a>
-        <span>›</span>
-        <a href="index.html#regions">Régions</a>
-        <span>›</span>
-        <span>Bankui</span>
-      </nav>
+    <!-- IMAGES -->
+    <div class="slider-content">
+      <img src="images/fespaco.png" class="active">
+      <img src="images/Entre_de_bankui.jpeg">
+      <img src="images/masque_de_bankui.jpeg">
+    </div>
 
-      <!-- Titre -->
-      <h1>Région de<br><em>Nakambé</em></h1>
+    <!-- OVERLAY -->
+    <div class="region-hero-inner slider-overlay">
 
-      <p class="region-chef">
-        📍 Chef-lieu : <strong>Nakambé</strong> &nbsp;·&nbsp; Provinces : Boulgou, Koulpélogo, Kouritenga
-      </p>
+      <div class="region-hero-left">
+        
+        <!-- Fil d'Ariane -->
+        <nav class="region-breadcrumb" aria-label="Fil d'Ariane">
+          <a href="index.html">Accueil</a>
+          <span>›</span>
+          <a href="index.html#regions">Régions</a>
+          <span>›</span>
+          <span>Nakambe</span>
+        </nav>
+
+        <!-- Titre -->
+        <h1>Région de<br><em>Nakambe</em></h1>
+
+        <!-- Infos -->
+        <p class="region-chef">
+          📍 Chef-lieu : <strong> Kaya</strong> · Provinces : Bam, Namentenga, Sanmatenga
+        </p>
+      </div>
+
+      <!-- STATS -->
+      <div class="region-hero-stats">
+        <div class="hero-stat">
+          <span class="hero-stat-num">1 874 669</span>
+          <span class="hero-stat-label">Habitants</span>
+        </div>
+
+        <div class="hero-stat-divider"></div>
+
+        <div class="hero-stat">
+          <span class="hero-stat-num">19 840  </span>
+          <span class="hero-stat-label">km²</span>
+        </div>
+
+        <div class="hero-stat-divider"></div>
+
+        <div class="hero-stat">
+          <span class="hero-stat-num">3</span>
+          <span class="hero-stat-label">Provinces</span>
+        </div>
+      </div>
 
     </div>
 
-    <!-- Mini stats -->
-    <div class="region-hero-stats">
-      <div class="hero-stat">
-        <span class="hero-stat-num">1 600 000</span>
-        <span class="hero-stat-label">Habitants</span>
-      </div>
-      <div class="hero-stat-divider"></div>
-      <div class="hero-stat">
-        <span class="hero-stat-num">25 000</span>
-        <span class="hero-stat-label">km²</span>
-      </div>
-      <div class="hero-stat-divider"></div>
-      <div class="hero-stat">
-        <span class="hero-stat-num">3</span>
-        <span class="hero-stat-label">Province</span>
-      </div>
-
-    </div>
+    <!-- CONTROLS -->
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+    <div class="dots"></div>
 
   </div>
 </section>
@@ -154,19 +175,39 @@
     <div class="region-text">
       <p>
         Nakambé est une région agricole importante avec des terres fertiles et une forte production céréalière.
-
+        La région de Nakambé (anciennement Centre-Est) tire
+       son nom du fleuve Nakambé (ex-Volta Blanche) qui la traverse 
+       du nord au sud. Le relief est plat à légèrement vallonné, avec 
+       de nombreux bas-fonds propices à la riziculture.
       </p>
         <p>
-            Elle joue un rôle historique important dans le royaume mossi.
+          Le barrage de Bagré, sur
+         le Nakambé, est l'un des plus grands ouvrages hydrauliques du Burkina, permettant
+          irrigation, pêche et production d'hydroélectricité.
+            la region joue un rôle historique important dans le royaume mossi.
+      </p>
+      <p>
+        La région du Centre-Est est caractérisée par une morphologie très plane dans son ensemble avec une
+altitude moyenne comprise entre 225 et 250 m, le point le plus élevé de la région est de 377 m et se situe
+dans la province du Boulgou. C’est donc une zone de plaines. Sa formation géologique est composée de
+trois (3) ensembles topographiques :
+
+
+
+les plateaux qui occupent le Kourittenga où ils s’étendent sur plus de 4/5 de la superficie de
+la province et forment une bande d’environ 7 km du Nord au Sud du Koulpélogo ;
+les plaines qui s’étendent sur 79 % de la région et occupent la province du Boulgou. Elles ont
+une altitude moyenne de 200 m ;
+les bas-fonds qui sont situés à l’extrême Sud du Boulgou et à l’extrême Est du Koulpélogo .
       </p>
     </div>
 
     <div class="info-box">
       <h4>📋 Données géographiques</h4>
       <dl>
-        <div class="info-row"><dt>Superficie</dt>      <dd>25 000km2</dd></div>
+        <div class="info-row"><dt>Superficie</dt>      <dd>14 142km2</dd></div>
         <div class="info-row"><dt>Climat</dt>   <dd>Soudanien</dd></div>
-        <div class="info-row"><dt>Pluviométrie</dt>    <dd>~300--800mm</dd></div>
+        <div class="info-row"><dt>Pluviométrie</dt>    <dd>~600–800 mm/an</dd></div>
       </dl>
     </div>
   </div>
@@ -189,15 +230,14 @@
         <div class="info-row"><dt>Population</dt>       <dd>~1 600 000</dd></div>        <div class="info-row"><dt>Chef-lieu</dt>         <dd>Dédougou</dd></div>
         <div class="info-row"><dt>Langue officielle</dt> <dd>Français</dd></div>
         <div class="info-row"><dt>Langue principale</dt> <dd>le moore</dd></div>
-        <div class="info-row"><dt>Ethnie majoritaire</dt><dd>les mossi, les bissa</dd></div>
+        <div class="info-row"><dt>Ethnie majoritaire</dt><dd>les mossi, les bissa, nakanan</dd></div>
         <div class="info-row"><dt>Religions</dt>         <dd>Islam, Christianisme, Animisme</dd></div>
       </dl>
     </div>
 
     <div class="region-text">
       <p>
-         Région cosmopolite, le region de Nakambé est un centre culturel majeur avec une forte diversité ethnique 
-        et linguistique.
+        La région de Nakambé est majoritairement peuplée par les Mossi, le groupe ethnique dominant du Burkina Faso, avec une forte présence de Bissa et de Nakan. La population est jeune et dynamique, avec une croissance démographique soutenue. Les habitants pratiquent principalement l'agriculture, l'élevage et le commerce, tout en préservant des traditions culturelles riches et diversifiées.
       </p>
     </div>
   </div>
@@ -239,39 +279,12 @@
 <!-- ===================================================
   SECTION 5 — GALERIE PHOTOS
   =================================================== -->
-<div id="galerie" class="region-section fade-up">
-  <div class="region-section-title">
-    <div class="icon blue">📷</div>
-    <h2>Galerie photos</h2>
-  </div>
-
-  <div class="galerie-grid">
-    <!-- Image principale (grande) -->
-    <div class="galerie-item">
-      <div class="galerie-placeholder">
-        <span>🏙️</span>
-        <p>Vue panoramique du Nakambé</p>
-        <small>Remplacez par : <code>img src="photos/gaoua-ville.jpg"</code></small>
-      </div>
-    </div>
-    <!-- Images secondaires -->
-    <div class="galerie-item">
-      <div class="galerie-placeholder">
-        <span>🎬</span>
-        <p>Village dori</p>
-      </div>
-    </div>
-    <div class="galerie-item">
-      <div class="galerie-placeholder">
-        <span>🛖</span>
-        <p>kaya cuir</p>
-      </div>
-    </div>
-  </div>
-
-  <p style="font-size:0.8rem; color:var(--text-muted); margin-top:16px; font-style:italic;">
-    💡 Pour ajouter vos photos : créez un dossier <code>photos/</code> et remplacez les placeholders par des balises <code>&lt;img&gt;</code>.
-  </p>
+<div class="image">
+  <img src="images/monumenMartyr.png" alt="">
+  <img src="images/placeNatio.jpeg" alt="">
+  <img src="images/ruine_lorepeni.jpeg" alt="">
+  <img src="images/maskoff.jpeg" alt="">
+  <img src="images/cascade.png" alt="">
 </div>
 
 <!-- ===================================================

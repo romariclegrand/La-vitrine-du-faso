@@ -84,45 +84,66 @@
   HERO RÉGION
   =================================================== -->
 <section class="region-hero">
-  <div class="region-hero-inner">
+  <div class="slider">
 
-    <div class="region-hero-left">
-      <!-- Fil d'Ariane -->
-      <nav class="region-breadcrumb" aria-label="Fil d'Ariane">
-        <a href="index.html">Accueil</a>
-        <span>›</span>
-        <a href="index.html#regions">Régions</a>
-        <span>›</span>
-        <span>Bankui</span>
-      </nav>
+    <!-- IMAGES -->
+    <div class="slider-content">
+      <img src="images/fespaco.png" class="active">
+      <img src="images/Entre_de_bankui.jpeg">
+      <img src="images/masque_de_bankui.jpeg">
+    </div>
 
-      <!-- Titre -->
-      <h1>Région de<br><em>Nazinon</em></h1>
+    <!-- OVERLAY -->
+    <div class="region-hero-inner slider-overlay">
 
-      <p class="region-chef">
-        📍 Chef-lieu : <strong>Manga</strong> &nbsp;·&nbsp; Provinces : Zoundwéogo, Nahouri, Bazèga
-      </p>
+      <div class="region-hero-left">
+        
+        <!-- Fil d'Ariane -->
+        <nav class="region-breadcrumb" aria-label="Fil d'Ariane">
+          <a href="index.html">Accueil</a>
+          <span>›</span>
+          <a href="index.html#regions">Régions</a>
+          <span>›</span>
+          <span>Nazinon</span>
+        </nav>
+
+        <!-- Titre -->
+        <h1>Région de<br><em>Nazinon</em></h1>
+
+        <!-- Infos -->
+        <p class="region-chef">
+          📍 Chef-lieu : <strong>Manga</strong> · Provinces : Zoundwéogo, Nahouri, Bazèga
+        </p>
+      </div>
+
+      <!-- STATS -->
+      <div class="region-hero-stats">
+        <div class="hero-stat">
+          <span class="hero-stat-num">1 874 669</span>
+          <span class="hero-stat-label">Habitants</span>
+        </div>
+
+        <div class="hero-stat-divider"></div>
+
+        <div class="hero-stat">
+          <span class="hero-stat-num">19 840  </span>
+          <span class="hero-stat-label">km²</span>
+        </div>
+
+        <div class="hero-stat-divider"></div>
+
+        <div class="hero-stat">
+          <span class="hero-stat-num">3</span>
+          <span class="hero-stat-label">Provinces</span>
+        </div>
+      </div>
 
     </div>
 
-    <!-- Mini stats -->
-    <div class="region-hero-stats">
-      <div class="hero-stat">
-        <span class="hero-stat-num">~900 000</span>
-        <span class="hero-stat-label">Habitants</span>
-      </div>
-      <div class="hero-stat-divider"></div>
-      <div class="hero-stat">
-        <span class="hero-stat-num">25 000</span>
-        <span class="hero-stat-label">km²</span>
-      </div>
-      <div class="hero-stat-divider"></div>
-      <div class="hero-stat">
-        <span class="hero-stat-num">3</span>
-        <span class="hero-stat-label">Province</span>
-      </div>
-
-    </div>
+    <!-- CONTROLS -->
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+    <div class="dots"></div>
 
   </div>
 </section>
@@ -190,15 +211,17 @@ Elle possède également des sites naturels uniques comme les collines de Nazing
         <div class="info-row"><dt>Population</dt>       <dd>~900 000</dd></div>        <div class="info-row"><dt>Chef-lieu</dt>         <dd>Dédougou</dd></div>
         <div class="info-row"><dt>Langue officielle</dt> <dd>Français</dd></div>
         <div class="info-row"><dt>Langue principale</dt> <dd>le moore</dd></div>
-        <div class="info-row"><dt>Ethnie majoritaire</dt><dd>les mossi, </dd></div>
+        <div class="info-row"><dt>Ethnie majoritaire</dt><dd>Mooré, Kassena, Nankana</dd></div>
         <div class="info-row"><dt>Religions</dt>         <dd>Animisme, Islam, Christianisme, </dd></div>
       </dl>
     </div>
 
     <div class="region-text">
       <p>
-         Région cosmopolite, le region de Manga est un centre educatif majeur avec une forte diversité ethnique 
-        et linguistique.
+         La région est principalement peuplée de Mossi, avec des communautés Kassena et
+       Nankana dans la province du Nahouri, au sud. Ces derniers partagent des liens culturels forts 
+       avec leurs cousins du Ghana voisin.Manga, le chef-lieu, est un marché important pour le 
+        bétail et les produits agricoles de la région.
       </p>
     </div>
   </div>
@@ -217,7 +240,12 @@ Elle possède également des sites naturels uniques comme les collines de Nazing
     <div class="region-text">
       <p>
          L’économie repose sur l'agriculture et l'elevage.
-   
+   La région est connue pour la production de <strong>karité</strong>,
+     transformé en beurre par des coopératives féminines exportant vers l'Europe et le Japon.
+      Le sorgho, le mil et le niébé constituent les cultures vivrières de base.
+      Le <strong>projet aurifère de Kiaka</strong> (West African Resources) devrait
+         produire environ 234 000 oz d'or par an, faisant de Nazinon un futur pôle minier majeur.
+          Le fleuve Nazinon soutient la <strong>pêche artisanale</strong> et le maraîchage irrigué.
       </p>
     </div>
   </div>
@@ -234,45 +262,21 @@ Elle possède également des sites naturels uniques comme les collines de Nazing
     <ul>
 <li>Ranch de Nazinga</li>
 <li>Faunes sauvage</li>
+<li>Fleuve Nazinon
+  Pêche artisanale active, pirogue et paysages 
+    de savane remarquables.</li>
 </ul>
 </div>
 
 <!-- ===================================================
   SECTION 5 — GALERIE PHOTOS
   =================================================== -->
-<div id="galerie" class="region-section fade-up">
-  <div class="region-section-title">
-    <div class="icon blue">📷</div>
-    <h2>Galerie photos</h2>
-  </div>
-
-  <div class="galerie-grid">
-    <!-- Image principale (grande) -->
-    <div class="galerie-item">
-      <div class="galerie-placeholder">
-        <span>🏙️</span>
-        <p>Vue panoramique du Nazinon</p>
-        <small>Remplacez par : <code>img src="photos/gaoua-ville.jpg"</code></small>
-      </div>
-    </div>
-    <!-- Images secondaires -->
-    <div class="galerie-item">
-      <div class="galerie-placeholder">
-        <span>🎬</span>
-        <p>Village de manga</p>
-      </div>
-    </div>
-    <div class="galerie-item">
-      <div class="galerie-placeholder">
-        <span>🛖</span>
-        <p>kaya cuir</p>
-      </div>
-    </div>
-  </div>
-
-  <p style="font-size:0.8rem; color:var(--text-muted); margin-top:16px; font-style:italic;">
-    💡 Pour ajouter vos photos : créez un dossier <code>photos/</code> et remplacez les placeholders par des balises <code>&lt;img&gt;</code>.
-  </p>
+<div class="image">
+  <img src="images/monumenMartyr.png" alt="">
+  <img src="images/placeNatio.jpeg" alt="">
+  <img src="images/ruine_lorepeni.jpeg" alt="">
+  <img src="images/maskoff.jpeg" alt="">
+  <img src="images/cascade.png" alt="">
 </div>
 
 <!-- ===================================================
