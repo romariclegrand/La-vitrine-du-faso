@@ -84,45 +84,66 @@
   HERO RÉGION
   =================================================== -->
 <section class="region-hero">
-  <div class="region-hero-inner">
+  <div class="slider">
 
-    <div class="region-hero-left">
-      <!-- Fil d'Ariane -->
-      <nav class="region-breadcrumb" aria-label="Fil d'Ariane">
-        <a href="index.html">Accueil</a>
-        <span>›</span>
-        <a href="index.html#regions">Régions</a>
-        <span>›</span>
-        <span>Bankui</span>
-      </nav>
+    <!-- IMAGES -->
+    <div class="slider-content">
+      <img src="images/fespaco.png" class="active">
+      <img src="images/Entre_de_bankui.jpeg">
+      <img src="images/masque_de_bankui.jpeg">
+    </div>
 
-      <!-- Titre -->
-      <h1>Région de<br><em>Oubri</em></h1>
+    <!-- OVERLAY -->
+    <div class="region-hero-inner slider-overlay">
 
-      <p class="region-chef">
-        📍 Chef-lieu : <strong>Ziniaré</strong> &nbsp;·&nbsp; Provinces : Oubritenga, Ganzourgou, Kourwéogo
-      </p>
+      <div class="region-hero-left">
+        
+        <!-- Fil d'Ariane -->
+        <nav class="region-breadcrumb" aria-label="Fil d'Ariane">
+          <a href="index.html">Accueil</a>
+          <span>›</span>
+          <a href="index.html#regions">Régions</a>
+          <span>›</span>
+          <span>Oubri</span>
+        </nav>
+
+        <!-- Titre -->
+        <h1>Région de<br><em>Oubri</em></h1>
+
+        <!-- Infos -->
+        <p class="region-chef">
+          📍 Chef-lieu : <strong>Ziniaré</strong> · Provinces : Oubritenga, Ganzourgou, Kourwéogo
+        </p>
+      </div>
+
+      <!-- STATS -->
+      <div class="region-hero-stats">
+        <div class="hero-stat">
+          <span class="hero-stat-num">1.800 000</span>
+          <span class="hero-stat-label">Habitants</span>
+        </div>
+
+        <div class="hero-stat-divider"></div>
+
+        <div class="hero-stat">
+          <span class="hero-stat-num">9 000  </span>
+          <span class="hero-stat-label">km²</span>
+        </div>
+
+        <div class="hero-stat-divider"></div>
+
+        <div class="hero-stat">
+          <span class="hero-stat-num">3</span>
+          <span class="hero-stat-label">Provinces</span>
+        </div>
+      </div>
 
     </div>
 
-    <!-- Mini stats -->
-    <div class="region-hero-stats">
-      <div class="hero-stat">
-        <span class="hero-stat-num">~1 000 000</span>
-        <span class="hero-stat-label">Habitants</span>
-      </div>
-      <div class="hero-stat-divider"></div>
-      <div class="hero-stat">
-        <span class="hero-stat-num">25 000</span>
-        <span class="hero-stat-label">km²</span>
-      </div>
-      <div class="hero-stat-divider"></div>
-      <div class="hero-stat">
-        <span class="hero-stat-num">3</span>
-        <span class="hero-stat-label">Province</span>
-      </div>
-
-    </div>
+    <!-- CONTROLS -->
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+    <div class="dots"></div>
 
   </div>
 </section>
@@ -153,19 +174,25 @@
   <div class="two-col">
     <div class="region-text">
       <p>
+        La région de l'Oubri, qui s'articule autour du berceau historique
+         Mossi (provinces du Ganzourgou, Kourwéogo et Oubritenga, anciennement Plateau-Central), regorge de potentialités diversifiées, allant de l'agriculture à 
+        un fort potentiel touristique et culturel
         Oubri est une région proche de Ouagadougou, marquée par une forte influence 
 culturelle et historique.
+
       </p>
         <p>
 Elle est connue pour être la région natale de plusieurs personnalités importantes.
-
-      </p>
+La zone est propice à l'agriculture avec des campagnes agricoles ambitieuses (plus de 39 000 tonnes de production attendues pour 2025-2026).
+La région développe des unités de pisciculture, ainsi que l'élevage de bovins, de porcs et d'autruches.
+La région est connue pour le Mausolée Naaba Oubri et le site de sculpture de Laon      
+</p>
     </div>
 
     <div class="info-box">
       <h4>📋 Données géographiques</h4>
       <dl>
-        <div class="info-row"><dt>Superficie</dt>      <dd>25 000km2</dd></div>
+        <div class="info-row"><dt>Superficie</dt>      <dd>9 000km2</dd></div>
         <div class="info-row"><dt>Climat</dt>   <dd>Soudano-sahélien</dd></div>
         <div class="info-row"><dt>Pluviométrie</dt>    <dd>~500--900mm</dd></div>
       </dl>
@@ -187,7 +214,7 @@ Elle est connue pour être la région natale de plusieurs personnalités importa
     <div class="info-box">
       <h4>📊 Données démographiques</h4>
       <dl>
-        <div class="info-row"><dt>Population</dt>       <dd>~1000 000</dd></div>        <div class="info-row"><dt>Chef-lieu</dt>         <dd>Dédougou</dd></div>
+        <div class="info-row"><dt>Population</dt>       <dd>~1 800 000</dd></div>        <div class="info-row"><dt>Chef-lieu</dt>         <dd>Dédougou</dd></div>
         <div class="info-row"><dt>Langue officielle</dt> <dd>Français</dd></div>
         <div class="info-row"><dt>Langue principale</dt> <dd>le moore</dd></div>
         <div class="info-row"><dt>Ethnie majoritaire</dt><dd>les mossi, </dd></div>
@@ -216,8 +243,12 @@ Elle est connue pour être la région natale de plusieurs personnalités importa
   <div class="two-col">
     <div class="region-text">
       <p>
-         L’économie repose sur l'agriculture et les services .
-   
+         L’économie est principalement basée sur l'agriculture et 
+         l'élevage. Cette zone, dont le chef-lieu est Ziniaré, joue un rôle clé dans 
+         la sécurité alimentaire nationale grâce à des productions végétales et des activités agro-pastorales .
+        La région de l'Oubri se positionne ainsi comme un acteur stratégique dans l'offensive agropastorale du
+         Burkina Faso, intégrant les personnes déplacées 
+        internes (PDI) dans ses activités de produc
       </p>
     </div>
   </div>
@@ -234,45 +265,19 @@ Elle est connue pour être la région natale de plusieurs personnalités importa
     <ul>
 <li>Musée de Manega</li>
 <li>Parc animalier de Ziniaré</li>
+<li>Sculptures sur granit de Laongo</li>
 </ul>
 </div>
 
 <!-- ===================================================
   SECTION 5 — GALERIE PHOTOS
   =================================================== -->
-<div id="galerie" class="region-section fade-up">
-  <div class="region-section-title">
-    <div class="icon blue">📷</div>
-    <h2>Galerie photos</h2>
-  </div>
-
-  <div class="galerie-grid">
-    <!-- Image principale (grande) -->
-    <div class="galerie-item">
-      <div class="galerie-placeholder">
-        <span>🏙️</span>
-        <p>Vue panoramique de Oubri</p>
-        <small>Remplacez par : <code>img src="photos/gaoua-ville.jpg"</code></small>
-      </div>
-    </div>
-    <!-- Images secondaires -->
-    <div class="galerie-item">
-      <div class="galerie-placeholder">
-        <span>🎬</span>
-        <p>Village de oubri</p>
-      </div>
-    </div>
-    <div class="galerie-item">
-      <div class="galerie-placeholder">
-        <span>🛖</span>
-        <p>kaya cuir</p>
-      </div>
-    </div>
-  </div>
-
-  <p style="font-size:0.8rem; color:var(--text-muted); margin-top:16px; font-style:italic;">
-    💡 Pour ajouter vos photos : créez un dossier <code>photos/</code> et remplacez les placeholders par des balises <code>&lt;img&gt;</code>.
-  </p>
+<div class="image">
+  <img src="images/monumenMartyr.png" alt="">
+  <img src="images/placeNatio.jpeg" alt="">
+  <img src="images/ruine_lorepeni.jpeg" alt="">
+  <img src="images/maskoff.jpeg" alt="">
+  <img src="images/cascade.png" alt="">
 </div>
 
 <!-- ===================================================

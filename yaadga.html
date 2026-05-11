@@ -84,45 +84,66 @@
   HERO RÉGION
   =================================================== -->
 <section class="region-hero">
-  <div class="region-hero-inner">
+  <div class="slider">
 
-    <div class="region-hero-left">
-      <!-- Fil d'Ariane -->
-      <nav class="region-breadcrumb" aria-label="Fil d'Ariane">
-        <a href="index.html">Accueil</a>
-        <span>›</span>
-        <a href="index.html#regions">Régions</a>
-        <span>›</span>
-        <span>Bankui</span>
-      </nav>
+    <!-- IMAGES -->
+    <div class="slider-content">
+      <img src="images/fespaco.png" class="active">
+      <img src="images/Entre_de_bankui.jpeg">
+      <img src="images/masque_de_bankui.jpeg">
+    </div>
 
-      <!-- Titre -->
-      <h1>Région de<br><em>Yaadga</em></h1>
+    <!-- OVERLAY -->
+    <div class="region-hero-inner slider-overlay">
 
-      <p class="region-chef">
-         Chef-lieu : <strong>Ouahigouya</strong> &nbsp;·&nbsp; Yatenga, Loroum, Zondoma
-      </p>
+      <div class="region-hero-left">
+        
+        <!-- Fil d'Ariane -->
+        <nav class="region-breadcrumb" aria-label="Fil d'Ariane">
+          <a href="index.html">Accueil</a>
+          <span>›</span>
+          <a href="index.html#regions">Régions</a>
+          <span>›</span>
+          <span>Yaadga</span>
+        </nav>
+
+        <!-- Titre -->
+        <h1>Région de<br><em>Yaadga</em></h1>
+
+        <!-- Infos -->
+        <p class="region-chef">
+          📍 Chef-lieu : <strong>Ouahigouya</strong> · Provinces :Yatenga, Zandoma, Titao, Loroum
+        </p>
+      </div>
+
+      <!-- STATS -->
+      <div class="region-hero-stats">
+        <div class="hero-stat">
+          <span class="hero-stat-num">1 874 669</span>
+          <span class="hero-stat-label">Habitants</span>
+        </div>
+
+        <div class="hero-stat-divider"></div>
+
+        <div class="hero-stat">
+          <span class="hero-stat-num">10000  </span>
+          <span class="hero-stat-label">km²</span>
+        </div>
+
+        <div class="hero-stat-divider"></div>
+
+        <div class="hero-stat">
+          <span class="hero-stat-num">4</span>
+          <span class="hero-stat-label">Provinces</span>
+        </div>
+      </div>
 
     </div>
 
-    <!-- Mini stats -->
-    <div class="region-hero-stats">
-      <div class="hero-stat">
-        <span class="hero-stat-num">~1 300 000</span>
-        <span class="hero-stat-label">Habitants</span>
-      </div>
-      <div class="hero-stat-divider"></div>
-      <div class="hero-stat">
-        <span class="hero-stat-num">25 000</span>
-        <span class="hero-stat-label">km²</span>
-      </div>
-      <div class="hero-stat-divider"></div>
-      <div class="hero-stat">
-        <span class="hero-stat-num">3</span>
-        <span class="hero-stat-label">Province</span>
-      </div>
-
-    </div>
+    <!-- CONTROLS -->
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+    <div class="dots"></div>
 
   </div>
 </section>
@@ -153,20 +174,16 @@
   <div class="two-col">
     <div class="region-text">
       <p>
-            Yaadga est une région du nord marquée par un climat sahélien et des défis climatiques importants.
-
-      </p>
-        <p>
-          Elle possède une forte tradition agricole et culturelle.
-
-      </p>
+La région de Yaadga (anciennement région du Nord), officialisée en juillet 2025, est une entité du Burkina Faso, dont le chef-lieu est Ouahigouya, qui regroupe les populations du berceau du royaume mossi du Yatenga. Elle est principalement peuplée par le peuple Yadega (Yalmcé), reconnus pour leur hospitalité, leur franc-parler, leur fidélité en amitié, et un fort attachement à la langue moré.
+          Elle possède une forte tradition agricole et culturelle.      
+</p>
     </div>
 
     <div class="info-box">
       <h4>📋 Données géographiques</h4>
       <dl>
-        <div class="info-row"><dt>Superficie</dt>      <dd>25 000km2</dd></div>
-        <div class="info-row"><dt>Climat</dt>   <dd>Sahelien </dd></div>
+        <div class="info-row"><dt>Superficie</dt>      <dd>10 000km2</dd></div>
+        <div class="info-row"><dt>Climat</dt>   <dd>soudano-sahelien </dd></div>
         <div class="info-row"><dt>Pluviométrie</dt>    <dd>~200--500mm</dd></div>
       </dl>
     </div>
@@ -197,8 +214,7 @@
 
     <div class="region-text">
       <p>
-         Région cosmopolite, le region de yaadga est un centre educatif majeur avec une forte diversité ethnique 
-        et linguistique.
+        
       </p>
     </div>
   </div>
@@ -216,8 +232,10 @@
   <div class="two-col">
     <div class="region-text">
       <p>
-         L’économie repose sur l'agriculture et l'elevage.
-   
+Agriculture vivrière : C'est le pilier majeur employant la majorité de la population active, axée sur la production céréalière
+Élevage : Activité traditionnelle cruciale, le Yatenga (province principale) et les zones avoisinantes (Lorum, Passoré, Zondoma) sont réputés pour l'élevage de bovins, caprins, ovins et volailles.
+Commerce : La ville de Ouahigouya agit comme un carrefour commercial important dans le nord du pays, reliant les zones rurales aux grands centres urbains.Artisanat : Les métiers de l'artisanat sont des maillons forts de l'économie régionale.Services : Le secteur tertiaire est en pleine restructuration avec un retour progressif à la normale des activités commerciales
+La région abrite des activités extractives (orpaillage), notamment dans la province du Yatenga (ex: Kalsaka).   
       </p>
     </div>
   </div>
@@ -240,39 +258,12 @@
 <!-- ===================================================
   SECTION 5 — GALERIE PHOTOS
   =================================================== -->
-<div id="galerie" class="region-section fade-up">
-  <div class="region-section-title">
-    <div class="icon blue">📷</div>
-    <h2>Galerie photos</h2>
-  </div>
-
-  <div class="galerie-grid">
-    <!-- Image principale (grande) -->
-    <div class="galerie-item">
-      <div class="galerie-placeholder">
-        <span>🏙️</span>
-        <p>Vue panoramique de Yaadga</p>
-        <small>Remplacez par : <code>img src="photos/gaoua-ville.jpg"</code></small>
-      </div>
-    </div>
-    <!-- Images secondaires -->
-    <div class="galerie-item">
-      <div class="galerie-placeholder">
-        <span>🎬</span>
-        <p>Village de yaadga  </p>
-      </div>
-    </div>
-    <div class="galerie-item">
-      <div class="galerie-placeholder">
-        <span>🛖</span>
-        <p>les lac de tapoa</p>
-      </div>
-    </div>
-  </div>
-
-  <p style="font-size:0.8rem; color:var(--text-muted); margin-top:16px; font-style:italic;">
-    💡 Pour ajouter vos photos : créez un dossier <code>photos/</code> et remplacez les placeholders par des balises <code>&lt;img&gt;</code>.
-  </p>
+<div class="image">
+  <img src="images/monumenMartyr.png" alt="">
+  <img src="images/placeNatio.jpeg" alt="">
+  <img src="images/ruine_lorepeni.jpeg" alt="">
+  <img src="images/maskoff.jpeg" alt="">
+  <img src="images/cascade.png" alt="">
 </div>
 
 <!-- ===================================================

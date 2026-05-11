@@ -84,45 +84,66 @@
   HERO RÉGION
   =================================================== -->
 <section class="region-hero">
-  <div class="region-hero-inner">
+  <div class="slider">
 
-    <div class="region-hero-left">
-      <!-- Fil d'Ariane -->
-      <nav class="region-breadcrumb" aria-label="Fil d'Ariane">
-        <a href="index.html">Accueil</a>
-        <span>›</span>
-        <a href="index.html#regions">Régions</a>
-        <span>›</span>
-        <span>Bankui</span>
-      </nav>
+    <!-- IMAGES -->
+    <div class="slider-content">
+      <img src="images/fespaco.png" class="active">
+      <img src="images/Entre_de_bankui.jpeg">
+      <img src="images/masque_de_bankui.jpeg">
+    </div>
 
-      <!-- Titre -->
-      <h1>Région de<br><em>Soum</em></h1>
+    <!-- OVERLAY -->
+    <div class="region-hero-inner slider-overlay">
 
-      <p class="region-chef">
-         Chef-lieu : <strong>Djibo</strong> &nbsp;·&nbsp; Soum
-      </p>
+      <div class="region-hero-left">
+        
+        <!-- Fil d'Ariane -->
+        <nav class="region-breadcrumb" aria-label="Fil d'Ariane">
+          <a href="index.html">Accueil</a>
+          <span>›</span>
+          <a href="index.html#regions">Régions</a>
+          <span>›</span>
+          <span>Soum</span>
+        </nav>
+
+        <!-- Titre -->
+        <h1>Région de<br><em>Soum</em></h1>
+
+        <!-- Infos -->
+        <p class="region-chef">
+          📍 Chef-lieu : <strong>Djibo</strong> · Provinces : Soum
+        </p>
+      </div>
+
+      <!-- STATS -->
+      <div class="region-hero-stats">
+        <div class="hero-stat">
+          <span class="hero-stat-num">600 000</span>
+          <span class="hero-stat-label">Habitants</span>
+        </div>
+
+        <div class="hero-stat-divider"></div>
+
+        <div class="hero-stat">
+          <span class="hero-stat-num"> 38,2% du Sahel </span>
+          <span class="hero-stat-label"> en km²</span>
+        </div>
+
+        <div class="hero-stat-divider"></div>
+
+        <div class="hero-stat">
+          <span class="hero-stat-num">1</span>
+          <span class="hero-stat-label">Provinces</span>
+        </div>
+      </div>
 
     </div>
 
-    <!-- Mini stats -->
-    <div class="region-hero-stats">
-      <div class="hero-stat">
-        <span class="hero-stat-num">~500 000</span>
-        <span class="hero-stat-label">Habitants</span>
-      </div>
-      <div class="hero-stat-divider"></div>
-      <div class="hero-stat">
-        <span class="hero-stat-num">25 000</span>
-        <span class="hero-stat-label">km²</span>
-      </div>
-      <div class="hero-stat-divider"></div>
-      <div class="hero-stat">
-        <span class="hero-stat-num">1</span>
-        <span class="hero-stat-label">Province</span>
-      </div>
-
-    </div>
+    <!-- CONTROLS -->
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+    <div class="dots"></div>
 
   </div>
 </section>
@@ -153,18 +174,23 @@
   <div class="two-col">
     <div class="region-text">
       <p>
-        Soum est une région sahélienne avec un climat très aride et des conditions 
-de vie difficiles.
+      Située dans le nord du Burkina Faso, le Soum fait partie de la région 
+      administrative du Sahel, limitrophe du Mali.
+      Le relief est globalement plat, composé de plaines, avec des ensembles fluvio-alluviaux comprenant des vallons 
+      colluvio-alluviaux et des plaines alluviales.
+
       </p>
         <p>
-            Elle est dominée par l’élevage et les activités pastorales.
-      </p>
+La zone est marquée par une végétation clairsemée de type sahélien, avec des savanes arborées et arbustives, soumise
+ à une forte pression de dégradation.  
+ La zone fait l'objet d'aménagements hydro-agricoles, notamment des plaines aménagées pour l'irrigation, comme à Djibo 
+   </p>
     </div>
 
     <div class="info-box">
       <h4>📋 Données géographiques</h4>
       <dl>
-        <div class="info-row"><dt>Superficie</dt>      <dd>25 000km2</dd></div>
+        <div class="info-row"><dt>Superficie</dt>      <dd>38.2% du Sahel</dd></div>
         <div class="info-row"><dt>Climat</dt>   <dd>sahélien aride </dd></div>
         <div class="info-row"><dt>Pluviométrie</dt>    <dd>~100--300mm</dd></div>
       </dl>
@@ -186,7 +212,7 @@ de vie difficiles.
     <div class="info-box">
       <h4>📊 Données démographiques</h4>
       <dl>
-        <div class="info-row"><dt>Population</dt>       <dd>~500 000</dd></div>        <div class="info-row"><dt>Chef-lieu</dt>         <dd>Dédougou</dd></div>
+        <div class="info-row"><dt>Population</dt>       <dd>~600 000</dd></div>        <div class="info-row"><dt>Chef-lieu</dt>         <dd>Dédougou</dd></div>
         <div class="info-row"><dt>Langue officielle</dt> <dd>Français</dd></div>
         <div class="info-row"><dt>Langue principale</dt> <dd>le Fulfuldé</dd></div>
         <div class="info-row"><dt>Ethnie majoritaire</dt><dd>les peuhl, </dd></div>
@@ -196,8 +222,6 @@ de vie difficiles.
 
     <div class="region-text">
       <p>
-         Région cosmopolite, le region de soum est un centre educatif majeur avec une forte diversité ethnique 
-        et linguistique.
       </p>
     </div>
   </div>
@@ -239,39 +263,12 @@ de vie difficiles.
 <!-- ===================================================
   SECTION 5 — GALERIE PHOTOS
   =================================================== -->
-<div id="galerie" class="region-section fade-up">
-  <div class="region-section-title">
-    <div class="icon blue">📷</div>
-    <h2>Galerie photos</h2>
-  </div>
-
-  <div class="galerie-grid">
-    <!-- Image principale (grande) -->
-    <div class="galerie-item">
-      <div class="galerie-placeholder">
-        <span>🏙️</span>
-        <p>Vue panoramique de Sirba</p>
-        <small>Remplacez par : <code>img src="photos/gaoua-ville.jpg"</code></small>
-      </div>
-    </div>
-    <!-- Images secondaires -->
-    <div class="galerie-item">
-      <div class="galerie-placeholder">
-        <span>🎬</span>
-        <p>Village de djibo</p>
-      </div>
-    </div>
-    <div class="galerie-item">
-      <div class="galerie-placeholder">
-        <span>🛖</span>
-        <p>kaya cuir</p>
-      </div>
-    </div>
-  </div>
-
-  <p style="font-size:0.8rem; color:var(--text-muted); margin-top:16px; font-style:italic;">
-    💡 Pour ajouter vos photos : créez un dossier <code>photos/</code> et remplacez les placeholders par des balises <code>&lt;img&gt;</code>.
-  </p>
+<div class="image">
+  <img src="images/monumenMartyr.png" alt="">
+  <img src="images/placeNatio.jpeg" alt="">
+  <img src="images/ruine_lorepeni.jpeg" alt="">
+  <img src="images/maskoff.jpeg" alt="">
+  <img src="images/cascade.png" alt="">
 </div>
 
 <!-- ===================================================

@@ -84,45 +84,66 @@
   HERO RÉGION
   =================================================== -->
 <section class="region-hero">
-  <div class="region-hero-inner">
+  <div class="slider">
 
-    <div class="region-hero-left">
-      <!-- Fil d'Ariane -->
-      <nav class="region-breadcrumb" aria-label="Fil d'Ariane">
-        <a href="index.html">Accueil</a>
-        <span>›</span>
-        <a href="index.html#regions">Régions</a>
-        <span>›</span>
-        <span>Bankui</span>
-      </nav>
+    <!-- IMAGES -->
+    <div class="slider-content">
+      <img src="images/fespaco.png" class="active">
+      <img src="images/Entre_de_bankui.jpeg">
+      <img src="images/masque_de_bankui.jpeg">
+    </div>
 
-      <!-- Titre -->
-      <h1>Région de<br><em>Tapoa</em></h1>
+    <!-- OVERLAY -->
+    <div class="region-hero-inner slider-overlay">
 
-      <p class="region-chef">
-         Chef-lieu : <strong>Diapaga</strong> &nbsp;·&nbsp; Tapoa
-      </p>
+      <div class="region-hero-left">
+        
+        <!-- Fil d'Ariane -->
+        <nav class="region-breadcrumb" aria-label="Fil d'Ariane">
+          <a href="index.html">Accueil</a>
+          <span>›</span>
+          <a href="index.html#regions">Régions</a>
+          <span>›</span>
+          <span>Tapoa</span>
+        </nav>
+
+        <!-- Titre -->
+        <h1>Région de<br><em>Tapoa</em></h1>
+
+        <!-- Infos -->
+        <p class="region-chef">
+          📍 Chef-lieu : <strong>Diapaga</strong> · Provinces : Tapoa, Kompienga
+        </p>
+      </div>
+
+      <!-- STATS -->
+      <div class="region-hero-stats">
+        <div class="hero-stat">
+          <span class="hero-stat-num">605 000</span>
+          <span class="hero-stat-label">Habitants</span>
+        </div>
+
+        <div class="hero-stat-divider"></div>
+
+        <div class="hero-stat">
+          <span class="hero-stat-num">15 000  </span>
+          <span class="hero-stat-label">km²</span>
+        </div>
+
+        <div class="hero-stat-divider"></div>
+
+        <div class="hero-stat">
+          <span class="hero-stat-num">2</span>
+          <span class="hero-stat-label">Provinces</span>
+        </div>
+      </div>
 
     </div>
 
-    <!-- Mini stats -->
-    <div class="region-hero-stats">
-      <div class="hero-stat">
-        <span class="hero-stat-num">~500 000</span>
-        <span class="hero-stat-label">Habitants</span>
-      </div>
-      <div class="hero-stat-divider"></div>
-      <div class="hero-stat">
-        <span class="hero-stat-num">25 000</span>
-        <span class="hero-stat-label">km²</span>
-      </div>
-      <div class="hero-stat-divider"></div>
-      <div class="hero-stat">
-        <span class="hero-stat-num">1</span>
-        <span class="hero-stat-label">Province</span>
-      </div>
-
-    </div>
+    <!-- CONTROLS -->
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+    <div class="dots"></div>
 
   </div>
 </section>
@@ -155,6 +176,8 @@
       <p>
             Tapoa est une région de l’est marquée par une forte présence de réserves naturelles 
 et de zones protégées.
+La région de la Tapoa, devenue une région administrative autonome en 2025, recèle d'importantes potentialités économiques, principalement 
+basées sur l'agropastoralisme, une biodiversité unique, et une position géographique stratégique
 
       </p>
         <p>
@@ -165,7 +188,7 @@ Elle fait partie des zones importantes pour la conservation de la biodiversité.
     <div class="info-box">
       <h4>📋 Données géographiques</h4>
       <dl>
-        <div class="info-row"><dt>Superficie</dt>      <dd>25 000km2</dd></div>
+        <div class="info-row"><dt>Superficie</dt>      <dd>15 000km2</dd></div>
         <div class="info-row"><dt>Climat</dt>   <dd>Sud-soudanien </dd></div>
         <div class="info-row"><dt>Pluviométrie</dt>    <dd>~500--800mm</dd></div>
       </dl>
@@ -187,7 +210,7 @@ Elle fait partie des zones importantes pour la conservation de la biodiversité.
     <div class="info-box">
       <h4>📊 Données démographiques</h4>
       <dl>
-        <div class="info-row"><dt>Population</dt>       <dd>~500 000</dd></div>        <div class="info-row"><dt>Chef-lieu</dt>         <dd>Dédougou</dd></div>
+        <div class="info-row"><dt>Population</dt>       <dd>~605 000</dd></div>        <div class="info-row"><dt>Chef-lieu</dt>         <dd>Dédougou</dd></div>
         <div class="info-row"><dt>Langue officielle</dt> <dd>Français</dd></div>
         <div class="info-row"><dt>Langue principale</dt> <dd>le gourmantchéma</dd></div>
         <div class="info-row"><dt>Ethnie majoritaire</dt><dd>les gourmantchéma </dd></div>
@@ -217,7 +240,8 @@ Elle fait partie des zones importantes pour la conservation de la biodiversité.
     <div class="region-text">
       <p>
          L’économie repose sur l'agriculture et l'elevage.
-   
+   Secteur dominant, avec des zones de pâturage spécialisées comme Dirgorgou (22 000 ha).
+    La Tapoa est très bien dotée en aires protégées, couvrant environ \(2\ 740\ \text{km}^2\).
       </p>
     </div>
   </div>
@@ -240,39 +264,12 @@ Elle fait partie des zones importantes pour la conservation de la biodiversité.
 <!-- ===================================================
   SECTION 5 — GALERIE PHOTOS
   =================================================== -->
-<div id="galerie" class="region-section fade-up">
-  <div class="region-section-title">
-    <div class="icon blue">📷</div>
-    <h2>Galerie photos</h2>
-  </div>
-
-  <div class="galerie-grid">
-    <!-- Image principale (grande) -->
-    <div class="galerie-item">
-      <div class="galerie-placeholder">
-        <span>🏙️</span>
-        <p>Vue panoramique de tapoa</p>
-        <small>Remplacez par : <code>img src="photos/gaoua-ville.jpg"</code></small>
-      </div>
-    </div>
-    <!-- Images secondaires -->
-    <div class="galerie-item">
-      <div class="galerie-placeholder">
-        <span>🎬</span>
-        <p>Village de tapoa</p>
-      </div>
-    </div>
-    <div class="galerie-item">
-      <div class="galerie-placeholder">
-        <span>🛖</span>
-        <p>les lac de tapoa</p>
-      </div>
-    </div>
-  </div>
-
-  <p style="font-size:0.8rem; color:var(--text-muted); margin-top:16px; font-style:italic;">
-    💡 Pour ajouter vos photos : créez un dossier <code>photos/</code> et remplacez les placeholders par des balises <code>&lt;img&gt;</code>.
-  </p>
+<div class="image">
+  <img src="images/monumenMartyr.png" alt="">
+  <img src="images/placeNatio.jpeg" alt="">
+  <img src="images/ruine_lorepeni.jpeg" alt="">
+  <img src="images/maskoff.jpeg" alt="">
+  <img src="images/cascade.png" alt="">
 </div>
 
 <!-- ===================================================
