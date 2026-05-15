@@ -1,4 +1,197 @@
 <!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BF·Regions / Potentialités</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ===== NAVIGATION ===== -->
+<!-- =====================================================
+  NAVBAR — À coller dans TOUS les fichiers HTML
+  (remplace ton <nav class="topbar"> existant)
+  ===================================================== -->
+
+<nav class="topbar">
+  <!-- <a href="index.html" class="logo">BF<span>·</span>Regions<span></span></a> -->
+  <a href="index.html" class="logo">BF<span>·</span>Regions</a>
+
+  <ul class="nav-links">
+    <li><a href="index.html">Accueil</a></li>
+
+    <!-- DROPDOWN RÉGIONS -->
+    <li class="nav-dropdown" id="regionsDropdown">
+      <button onclick="toggleDropdown()" aria-haspopup="true">
+        Régions <i class="chevron">▾</i>
+      </button>
+      <div class="dropdown-panel" role="menu">
+        <p class="panel-title">Les 17 régions du Burkina Faso</p>
+        <div class="dropdown-grid">
+          <a href="bankui.html">    <span class="reg-name">Bankui</span>    <span class="reg-chef">Dédougou</span></a>
+          <a href="djoro.html">     <span class="reg-name">Djôrô</span>     <span class="reg-chef">Gaoua</span></a>
+          <a href="guiriko.html">   <span class="reg-name">Guiriko</span>   <span class="reg-chef">Bobo-Dioulasso</span></a>
+          <a href="goulmou.html">   <span class="reg-name">Goulmou</span>   <span class="reg-chef">Fada N'Gourma</span></a>
+          <a href="kadiogo.html">   <span class="reg-name">Kadiogo</span>   <span class="reg-chef">Ouagadougou</span></a>
+          <a href="koulse.html">    <span class="reg-name">Koulsé</span>    <span class="reg-chef">Kaya</span></a>
+          <a href="liptako.html">   <span class="reg-name">Liptako</span>   <span class="reg-chef">Dori</span></a>
+          <a href="nakambe.html">   <span class="reg-name">Nakambé</span>   <span class="reg-chef">Tenkodogo</span></a>
+          <a href="nando.html">     <span class="reg-name">Nando</span>     <span class="reg-chef">Koudougou</span></a>
+          <a href="nazinon.html">   <span class="reg-name">Nazinon</span>   <span class="reg-chef">Manga</span></a>
+          <a href="oubri.html">     <span class="reg-name">Oubri</span>     <span class="reg-chef">Ziniaré</span></a>
+          <a href="sirba.html">     <span class="reg-name">Sirba</span>     <span class="reg-chef">Bogandé</span></a>
+          <a href="soum.html">      <span class="reg-name">Soum</span>      <span class="reg-chef">Djibo</span></a>
+          <a href="sourou.html">    <span class="reg-name">Sourou</span>    <span class="reg-chef">Tougan</span></a>
+          <a href="tannounyan.html"><span class="reg-name">Tannounyan</span><span class="reg-chef">Banfora</span></a>
+          <a href="tapoa.html">     <span class="reg-name">Tapoa</span>     <span class="reg-chef">Diapaga</span></a>
+          <a href="yaadga.html">    <span class="reg-name">Yaadga</span>    <span class="reg-chef">Ouahigouya</span></a>
+        </div>
+      </div>
+    </li>
+    <!-- FIN DROPDOWN -->
+
+    <li><a href="about.html">À propos</a></li>
+  </ul>
+
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MENU MOBILE (juste après le <nav>) -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Accueil</a>
+
+  <!-- Accordéon régions mobile -->
+  <button class="mobile-dropdown-toggle" id="mobileRegionsBtn" onclick="toggleMobileRegions()">
+    Régions <i class="chevron">▾</i>
+  </button>
+  <div class="mobile-regions-list" id="mobileRegionsList">
+    <a href="bankui.html">    Bankui     <span>Dédougou</span></a>
+    <a href="djoro.html">     Djôrô      <span>Gaoua</span></a>
+    <a href="guiriko.html">   Guiriko    <span>Bobo-Dioulasso</span></a>
+    <a href="goulmou.html">   Goulmou    <span>Fada N'Gourma</span></a>
+    <a href="kadiogo.html">   Kadiogo    <span>Ouagadougou</span></a>
+    <a href="koulse.html">    Koulsé     <span>Kaya</span></a>
+    <a href="liptako.html">   Liptako    <span>Dori</span></a>
+    <a href="nakambe.html">   Nakambé    <span>Tenkodogo</span></a>
+    <a href="nando.html">     Nando      <span>Koudougou</span></a>
+    <a href="nazinon.html">   Nazinon    <span>Manga</span></a>
+    <a href="oubri.html">     Oubri      <span>Ziniaré</span></a>
+    <a href="sirba.html">     Sirba      <span>Bogandé</span></a>
+    <a href="soum.html">      Soum       <span>Djibo</span></a>
+    <a href="sourou.html">    Sourou     <span>Tougan</span></a>
+    <a href="tannounyan.html">Tannounyan <span>Banfora</span></a>
+    <a href="tapoa.html">     Tapoa      <span>Diapaga</span></a>
+    <a href="yaadga.html">    Yaadga     <span>Ouahigouya</span></a>
+  </div>
+
+  <a href="about.html">À propos</a>
+</div>
+
+
+<!-- Supprime complètement <section class="page-hero"> et remplace par : -->
+
+<!-- Slider hero -->
+<div class="region-hero has-slider">
+  <div class="slider">
+    <div class="slider-content">
+      <img src="images/monumenMartyr.png" class="active">
+      <img src="images/fespaco.png" alt="">
+      <img src="images/cascade.png" alt="">
+      <img src="images/monumaThoma.jpeg" alt="">
+      <img src="images/mosquer.jpeg" alt="">
+      <img src="images/danseur.png" alt="">
+      <img src="images/maskoff.jpeg" alt="">
+      <img src="images/placeNatio.jpeg" alt="">
+    </div>
+
+    <!-- Overlay texte -->
+    <div class="slider-overlay">
+      <div class="slider-text">
+        <h1>Une vitrine pour les<br><span>17 régions du Burkina</span></h1>
+        <p>Allez à la découverte des richesses et potentialités de chaque région administrative.</p>
+      </div>
+    </div>
+
+    <button class="prev">❮</button>
+    <button class="next">❯</button>
+    <div class="dots"></div>
+  </div>
+</div>
+
+
+
+  <div>
+    <p>
+      <strong>
+            Ce site est cree par des étudiants de l'Université Norbert Zongo dans le cadre d'un projet de MPCI. 
+      Il vise à présenter les différentes régions du Burkina Faso, 
+      leurs richesses culturelles, historiques et touristiques. 
+      Nous espérons que ce site vous permettra de découvrir 
+      la diversité et la beauté de notre pays. N'hésitez pas à nous 
+      contacter pour toute suggestion ou contribution.
+      </strong>
+  
+    </p>
+  </div>
+    <section class="section section-alt">
+  <div class="section-header fade-up">
+    <span class="section-tag">L'équipe</span>
+    <h2>Réalisé par</h2>
+  </div>
+
+  <div class="equipe-grid">
+    <div class="membre-card fade-up">
+      <div class="avatar avatar-green">YW</div>
+      <p class="membre-name">Romaric Y. W.</p>
+      <p class="membre-role">concepteur et developpeur</p>
+      <p class="membre-desc"> <a href="mailto:romaric.y.w@gmail.com">romaricyelkouni1@gmail.com</a> </p>
+      <p class="membre-des">
+        <a href="https://github.com/romariclegrand" target="_blank">Profil GitHub</a>
+      </p>
+    </div>
+    <div class="membre-card fade-up">
+      <div class="avatar avatar-amber">BP</div>
+      <p class="membre-name">Patrick B.</p>
+      <p class="membre-role">concepteur</p>
+      <p class="membre-desc">
+      <p class="membre-desc"> <a href="mailto:romaric.y.w@gmail.com">romaricyelkouni1@gmail.com</a> </p>
+      <p>
+              <p class="membre-des">
+        <a href="https://github.com/romariclegrand" target="_blank">Profil GitHub</a>
+      </p>
+      </p>
+
+      </p>
+    </div>
+    <div class="membre-card fade-up">
+      <div class="avatar avatar-amber">ZP</div>
+      <p class="membre-name">Zongo Pengdwende.</p>
+      <p class="membre-role">Enseignant chercheur</p>
+      <p class="membre-desc">
+        Enseignant d'informatique à l'Université Norbert Zongo.
+      </p>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="footer-logo">BF<span>·</span>Regions<span>/potentialités</span></div>
+  <nav class="footer-links">
+    <a href="index.html">Accueil</a>
+    <a href="index.html#regions">Régions</a>
+    <a href="about.html">À propos</a>
+  </nav>
+  <p class="footer-copy">
+    © 2025-2026 — Romaric &amp; Patrick · Université Norbert Zongo · Koudougou, Burkina Faso<br>
+  </p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -73,4 +266,4 @@
 </footer>
 <script src="script.js"></script>
 </body>
-</html>
+</html> -->
